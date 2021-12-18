@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp2
 {
@@ -49,10 +50,12 @@ namespace ConsoleApp2
                 }
             }
 
-            //for (int i = 0; i < etalonDeals.Length; i++)
-            //{
-            //    Console.WriteLine($"{etalonDeals[i]}");
-            //}
+
+            Console.WriteLine("The max profit would be on next deals:\n");
+            for (int i = 0; i < etalonDeals.Length; i++)
+            {
+                Console.WriteLine($"{etalonDeals[i]}");
+            }
 
             return maxProfit;
         }
@@ -105,15 +108,15 @@ namespace ConsoleApp2
                 Combos.Add(combination);
             }
 
-            //Console.WriteLine("-------------------");
-            //foreach (var combo in Combos)
-            //{
-            //    foreach (var deal in combo)
-            //    {
-            //        Console.WriteLine(deal);
-            //    }
-            //    Console.WriteLine("*****");
-            //}
+            Console.WriteLine("-------------------");
+            foreach (var combo in Combos)
+            {
+                foreach (var deal in combo)
+                {
+                    Console.WriteLine(deal);
+                }
+                Console.WriteLine("*****");
+            }
 
             return Combos;
 
@@ -156,7 +159,7 @@ namespace ConsoleApp2
                         var deal = new Deal(_lockableSequence.GetValue(i), _lockableSequence.GetValue(j), dealIndex, i, j);
                         _allDeals.Add(deal);
 
-                        //Console.WriteLine(deal);
+                        Console.WriteLine(deal);
 
                         GenerateListOfAllPossibleDeals(dealIndex + 1, j);
                         _lockableSequence.UnlockAll();

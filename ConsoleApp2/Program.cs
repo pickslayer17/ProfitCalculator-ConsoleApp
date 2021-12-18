@@ -14,10 +14,10 @@ namespace ConsoleApp4
         {
             List<int> sequence = new List<int>()
             {
-                 1, 523, 34, 55, 231, 144, 233, 45, 377
+                 1, 34, 55, 231, 144, 233, 45, 377//, 400, 500, 233, 890, 765, 999, 654, 578, 608, 450, 382, 543, 876, 943 
             };
 
-            var n = 2;
+            var n = 3;
 
             Console.WriteLine(maxProfit(sequence, n));
 

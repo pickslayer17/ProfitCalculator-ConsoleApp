@@ -19,7 +19,7 @@
         }
         public override string ToString()
         {
-            return $" [{DealIndex}] { i} : {j} -[{BuyPrice} - {SellPrice} = {Profit}]";
+            return $" [{DealIndex}] { i} : {j} - [{BuyPrice} , {SellPrice} = {Profit}]";
         }
     }
 
